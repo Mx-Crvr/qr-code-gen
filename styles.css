@@ -137,3 +137,121 @@ input:focus, select:focus {
     transition: all 0.3s ease-in-out;
     border-radius: 0.2em;
 }
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 992px) {    
+    body {
+        font-size: 1em;
+    }
+    
+    header {
+        padding: 1em 2em;
+    }
+    
+    h1 {
+        font-size: 1.4em;
+    }
+    
+    main {
+        padding: 3em 2em; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .main-flex {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: stretch;
+    }
+    
+    .content-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        width: 100%;
+        gap: 1.2em;
+    }
+    
+    .img-flex {
+        text-align: center;
+    }
+
+    .svg {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 2em;
+    }
+    
+    input, select {
+        padding: 1em;
+        font-size: 1em;
+    }
+        
+    .btn {
+        font-size: 1em;
+        padding: 0.75em 0;
+    }
+    
+    #generated, #qrcode {
+        padding: 0 2em;
+        text-align: center;
+    }
+
+    #spinner {
+        display: none;
+        text-align: center;
+    }   
+    
+    #qrcode {
+        margin: 5em 0;
+        text-align: center;
+    }
+    
+        @keyframes spinner {
+            0% {
+              transform: translate3d(-50%, -50%, 0) rotate(0deg);
+            }
+            100% {
+              transform: translate3d(-50%, -50%, 0) rotate(360deg);
+            }
+          }
+          .spin::before {
+            animation: 1.5s linear infinite spinner;
+            animation-play-state: inherit;
+            border: solid 8px #c2c2c2;
+            border-bottom-color: #18548f;
+            border-radius: 50%;
+            content: "";
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            top: 115%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            will-change: transform;
+          }
+/* 
+          .sr-only {
+            margin-bottom: -10em;
+          } */
+    
+    .save-btn {
+        padding: 0.5em 1em;
+        width: 83%;
+        margin: auto;
+    }
+}
+
