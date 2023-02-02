@@ -26,3 +26,114 @@ h1 {
     font-weight: 600;
     font-size: 1.8em;
 }
+
+h2 {
+    font-weight: 700;
+}
+
+main {
+    padding: 3em 6em; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    gap: 1em;
+}
+
+.svg {
+    border: #18548f 2px solid;
+    padding: 1em;  
+    border-radius: 0.5em;
+}
+
+input, select {
+    border-radius: 0.2em;
+    border: #c2c2c2 solid 1px;
+    padding: 0.5em;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+input:focus, select:focus {
+    background-color: #18548f23
+}
+
+.btn {
+    font-size: 0.8em;
+    border-radius: 0.2em;
+    background-color: #18548f;
+    color: #f2f2f2f2;
+    border: 1px solid #18548f;
+    padding: 0.5em 0;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+    .btn:hover, .save-btn:hover {
+        background-color: #18548f45;
+        color: #18548f;
+    }
+
+.generated {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#spinner {
+    display: none;
+}   
+
+#qrcode {
+    margin: 3em 0;
+
+}
+
+    @keyframes spinner {
+        0% {
+          transform: translate3d(-50%, -50%, 0) rotate(0deg);
+        }
+        100% {
+          transform: translate3d(-50%, -50%, 0) rotate(360deg);
+        }
+      }
+      .spin::before {
+        animation: 1.5s linear infinite spinner;
+        animation-play-state: inherit;
+        border: solid 8px #c2c2c2;
+        border-bottom-color: #18548f;
+        border-radius: 50%;
+        content: "";
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        top: 82%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        will-change: transform;
+      }
+
+.save-btn {
+    text-align: center;
+    text-decoration: none;
+    background-color: #18548f;
+    color: #f2f2f2;
+    border: 1px solid #18548f;
+    padding: 0.25em 0.8em;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 0.2em;
+}
